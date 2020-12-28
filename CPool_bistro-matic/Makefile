@@ -1,0 +1,46 @@
+##
+## Makefile for Makefile in /home/clemsx/delivery/CPool_Day12
+## 
+## Made by clement xia
+## Login   <clemsx@epitech.net>
+## 
+## Started on  Wed Oct 19 08:01:14 2016 clement xia
+## Last update Sun Nov  6 21:31:20 2016 jimmy mathurin
+##
+
+CC	= 	gcc
+
+RM	= 	rm -f
+
+CFLAGS	+= 	-Wextra -Wall -Werror
+
+SRCS	= 	main.c		\
+		display_info.c	\
+		infin_add.c	\
+		infin_mul.c	\
+		infin_sub.c	\
+		my_putchar.c	\
+		my_strlen.c	\
+		my_evalexpr.c
+		tools.c
+
+OBJS	= 	$(SRCS:.c=.o)
+
+LIB	=	-L./lib/my -lmy
+
+NAME	= 	calc
+
+all: 	$(NAME)
+
+$(NAME):
+	$(CC) -o $(NAME) $(SRCS) $(LIB) $(CFLAGS)
+
+clean:
+	$(RM) $(OBJS)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean clean all
+
+.PHONY: all clean fclean re

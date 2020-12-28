@@ -1,0 +1,12 @@
+/*
+** my.h for my in /home/clemsx/delivery/CPool_Day09/include
+** 
+** Made by clement xia
+** Login   <clemsx@epitech.net>
+** 
+** Started on  Thu Oct 13 17:29:50 2016 clement xia
+** Last update Thu Oct 13 17:31:46 2016 clement xia
+*/
+
+int	my_find_prime_sup(int nb);
+int	my_getnbr(char *str);
